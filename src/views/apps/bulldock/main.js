@@ -2,7 +2,7 @@ let bulldock = document.createElement('div');
 
 
 var request = new XMLHttpRequest();
-request.open('GET', "http://localhost:5500/src/views/apps/bulldock/dock.html");
+request.open('GET', "/src/views/apps/bulldock/dock.html");
 
 request.onload = () => {
     bulldock.innerHTML = request.response;

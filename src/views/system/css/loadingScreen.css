@@ -17,6 +17,7 @@ body, html{
     margin:7px;
     animation: spin 1s ease infinite;
     transition: 1s ease;
+    opacity: 0;
 }
 
 @keyframes spin{
