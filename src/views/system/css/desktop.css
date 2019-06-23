@@ -22,6 +22,10 @@
     box-shadow: 0px 7px 20px rgba(0,0,0,.6);
     animation: popIn .3s ease;
 }
+.app-window.minimized{
+    transform: scale(0.99);
+    opacity: 0;
+}
 
 .app-window-inner{
     font-size: 18px;
@@ -36,7 +40,7 @@
 .app-window-split.left{
     width: 22%;
     height: 100%;
-    background: rgba(0,0,0,.7);
+    background: rgba(0,0,0,.6);
     backdrop-filter: blur(25px);
 }
 .app-window-split.right{
@@ -88,5 +92,5 @@
 
 @keyframes popIn{
     0%{ opacity: 0; transform: scale(.96); }
-    1000%{ opacity: 1; transform: scale(1); }
+    100%{ opacity: 1; transform: scale(1); }
 }

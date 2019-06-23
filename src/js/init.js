@@ -1,6 +1,10 @@
 console.log("Welcome to PowerOS!");
 
-let POS = {};
+let POS = {
+    system: {
+        apps: []
+    }
+};
 
 let parseScripts = scripts => {
     scripts.forEach(e => {
