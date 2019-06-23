@@ -1,0 +1,91 @@
+.all-wrapper{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: left;
+    font-size: 20px;
+
+    background: url('/src/views/system/img/wallpaper.jpg') no-repeat center;
+    animation: popIn .5s ease;
+}
+
+.app-window{
+    width: 1100px;
+    height: 600px;
+    top: 100px;
+    left: 300px;
+    position: fixed;
+    border-radius: 17px 17px 5px 5px;
+    box-shadow: 0px 7px 20px rgba(0,0,0,.6);
+    animation: popIn .3s ease;
+}
+
+.app-window-inner{
+    font-size: 18px;
+    width: 100%;
+    height: calc(100% - 35px);
+}
+
+.app-window-split{
+    height: 100%;
+    float: left;
+}
+.app-window-split.left{
+    width: 22%;
+    height: 100%;
+    background: rgba(0,0,0,.7);
+    backdrop-filter: blur(25px);
+}
+.app-window-split.right{
+    width: 78%;
+    background: #222;
+}
+
+.app-window-category{
+    width: calc(100% - 20px);
+    height: 50px;
+    line-height: 50px;
+    transition: .2s ease;
+    padding-left: 20px;
+}
+.app-window-category:hover{
+    background: rgba(0,0,0,.3);
+    cursor: pointer;
+}
+
+.app-window-category-icon{
+    margin-right: 10px;
+    font-size: 24px;
+    float: left;
+}
+
+.desktop-icon{
+    width: 90px;
+    height: 130px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    transition: .1s ease;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 16px;
+}
+.desktop-icon:hover{
+    background: rgba(0,0,0,.2);
+    cursor: pointer;
+}
+.desktop-icon:active{
+    background: rgba(0,0,0,.3);
+}
+
+.desktop-icon-img{
+    width: 90px;
+    height: 90px;
+}
+
+@keyframes popIn{
+    0%{ opacity: 0; transform: scale(.95) }
+    1000%{ opacity: 1; transform: scale(1) }
+}

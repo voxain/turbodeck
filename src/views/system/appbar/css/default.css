@@ -1,0 +1,31 @@
+.appbar{
+    height: 35px;
+    line-height: 35px;
+    background: #111;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+}
+
+.appbar-icon{
+    width: 27px;
+    height: 27px;
+    margin: 4px;
+    margin-right: 6px;
+    float: left;
+}
+.appbar-icon-small{
+    width: 25px;
+    height: 25px;
+    margin: 4px;
+    line-height: 25px;
+    text-align: center;
+    transition: .2s ease;
+    border-radius: 100px;
+}
+.appbar-icon-small:hover{
+    background: rgba(255,255,255,.3);
+    cursor: pointer;
+}
+.appbar-icon-small.right{
+    float:right;
+}

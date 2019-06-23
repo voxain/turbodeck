@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium Web');
+body{
+    background: #000000;
+    color:white;
+    font-family: 'Titillium Web';
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding :0;
+}
+input, button, textarea{
+    font-family: 'Titillium Web';
+    border: none;
+    background: none;
+    color: white;
+    font-size: 18px;
+}
+input:focus, button:focus, textarea:focus{
+    outline:none;
+}
+
+.fadeIn{
+    animation: fadeIn 1s linear;
+}
+@keyframes fadeIn{
+    0%{opacity:0}
+    100%{opacity:1}
+}

@@ -1,0 +1,31 @@
+body, html{
+    text-align: center;
+    font-size: 30px;
+}
+
+.loading-logo{
+    margin-top: 150px;
+    animation: rollIn 2s cubic-bezier(0,0,0,1);
+    transition: 1s ease;
+}
+.loading-ball{
+    width:5px;
+    height:5px;
+    border-radius: 1000px;
+    background:white;
+    display:inline-block;
+    margin:7px;
+    animation: spin 1s ease infinite;
+    transition: 1s ease;
+}
+
+@keyframes spin{
+    0%  { transform:scale(1) }
+    10% { transform: scale(2) }
+    80%{ transform: scale(1) }
+}
+
+@keyframes rollIn{
+    0%{filter: blur(150px); transform: rotate(-5000deg)}
+    100%{filter: blur(0px); transform: rotate(0deg)}
+}
