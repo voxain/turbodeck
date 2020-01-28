@@ -9,16 +9,18 @@
     font-size: 20px;
 
     background: url('/src/views/system/img/wallpaper.jpg') no-repeat center;
+    background-size: cover;
     animation: popIn .5s ease;
 }
 
 .app-window{
-    width: 1100px;
+    width: 1000px;
     height: 600px;
     top: 100px;
     left: 300px;
     position: fixed;
     border-radius: 17px 17px 5px 5px;
+    overflow: hidden !important;
     box-shadow: 0px 7px 20px rgba(0,0,0,.6);
     animation: popIn .3s ease;
 }
@@ -42,18 +44,21 @@
     height: 100%;
     background: rgba(0,0,0,.6);
     backdrop-filter: blur(25px);
+    border-radius: 0 0 0 5px;
 }
 .app-window-split.right{
     width: 78%;
-    background: #222;
+    background: #191919;
+    box-sizing: border-box;
+    padding: 15px;
 }
 
 .app-window-category{
-    width: calc(100% - 20px);
+    width: calc(100% - 15px);
     height: 50px;
     line-height: 50px;
     transition: .2s ease;
-    padding-left: 20px;
+    padding-left: 15px;
 }
 .app-window-category:hover{
     background: rgba(0,0,0,.3);
@@ -91,6 +96,6 @@
 }
 
 @keyframes popIn{
-    0%{ opacity: 0; transform: scale(.96); }
-    100%{ opacity: 1; transform: scale(1); }
+    0%{ opacity: 0; transform: scale(.95);}
+    100%{ opacity: 1; transform: scale(1);}
 }

@@ -29,10 +29,13 @@
 }
 
 .tooltip{
-    background: rgba(0,0,0,.8);
+    background: rgba(0,0,0,.5);
+    backdrop-filter: blur(25px);
     position: fixed;
     width: 160px;
     height: 35px;
     border-radius: 100px;
     overflow: hidden;
+    box-shadow: 0px 7px 20px rgba(0,0,0,.6);
+    animation: fadeIn .2s ease;
 }

@@ -5,7 +5,7 @@ body, html{
 
 .loading-logo{
     margin-top: 150px;
-    animation: rollIn 2s cubic-bezier(0,0,0,1);
+    animation: blurIn 1s cubic-bezier(0,0,0,1);
     transition: 1s ease;
 }
 .loading-ball{
@@ -26,7 +26,7 @@ body, html{
     80%{ transform: scale(1) }
 }
 
-@keyframes rollIn{
-    0%{filter: blur(150px); transform: rotate(-5000deg)}
-    100%{filter: blur(0px); transform: rotate(0deg)}
+@keyframes blurIn{
+    0%{opacity:0; filter: blur(150px)}
+    100%{opacity:1; filter: blur(0px)}
 }
