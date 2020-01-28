@@ -54,11 +54,10 @@
 }
 
 .app-window-category{
-    width: calc(100% - 15px);
+    width: calc(100% );
     height: 50px;
     line-height: 50px;
     transition: .2s ease;
-    padding-left: 15px;
 }
 .app-window-category:hover{
     background: rgba(0,0,0,.3);
@@ -71,6 +70,13 @@
     float: left;
 }
 
+.icon{
+    width: 22px;
+    padding: 14px;
+    float: left;
+    padding-right: 10px;
+}
+
 .desktop-icon{
     width: 90px;
     height: 130px;
@@ -81,6 +87,7 @@
     overflow: hidden;
     display: inline-block;
     font-size: 16px;
+    border-radius: 10px;
 }
 .desktop-icon:hover{
     background: rgba(0,0,0,.2);

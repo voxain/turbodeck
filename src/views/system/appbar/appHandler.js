@@ -6,6 +6,7 @@ POS.openAppWindow = appID => {
     else{
         let appInformation = JSON.parse(HTTP.get('apps/' + appID + '/app.json'));
 
+
         let appWindow = document.createElement('div');
         appWindow.name = appID
         appWindow.state = 'active'
@@ -40,13 +41,13 @@ function createAppBar(name, info, appWindow){
 
     let systemIcons = [];
     for (let i = 0; i < 3; i++) {
-        systemIcons.push(document.createElement('span'));
-        systemIcons[i].classList = 'appbar-icon-small right mdil ';
+        systemIcons.push(document.createElement('img'));
+        systemIcons[i].classList = 'appbar-icon-small right';
     }
 
-    systemIcons[0].classList += 'mdil-chevron-double-down';
-    systemIcons[1].classList += 'mdil-chevron-up';
-    systemIcons[2].classList += 'mdil-chevron-down';
+    systemIcons[0].src = '/src/views/system/icons/UI/icons8_cancel.svg';
+    systemIcons[1].src = '/src/views/system/icons/UI/icons8_collapse_arrow.svg';
+    systemIcons[2].src = '/src/views/system/icons/UI/icons8_expand_arrow.svg';
 
     systemIcons[0].onclick = () => {
         POS.system.apps.splice( POS.system.apps.findIndex(a => a == appWindow) , 1);

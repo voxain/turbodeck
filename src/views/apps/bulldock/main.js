@@ -30,6 +30,12 @@ request.send();
 
 bulldock.classList = 'bulldock';
 
+$( bulldock ).sortable();
+$( bulldock ).disableSelection();
+$( bulldock ).sortable({
+    items: "img:not(.ui-state-disabled)"
+});
+
 parseStyles(["/src/views/apps/bulldock/css/bulldock.css"]);
 $('#all-wrapper').append(bulldock);
 
