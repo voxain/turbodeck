@@ -18,7 +18,7 @@ request.onload = () => {
     }, 7000);
     setTimeout(() => {
         parseScripts(["js/init/desktop.js"]);
-    }, /*9000*/ 9000);
+    }, /*9000*/ 100);
 };
 request.onerror = err => {
     console.log(err);

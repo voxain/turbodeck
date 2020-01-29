@@ -25,4 +25,4 @@ let parseStyles = scripts => {
 
 
 
-parseScripts(["https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js", "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js", "js/REQUEST.js", "js/init/loadingScreen.js"]);
+parseScripts(["https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js", "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js", "js/REQUEST.js", "js/init/loadingScreen.js", "js/init/fs.js"]);
