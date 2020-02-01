@@ -2,7 +2,18 @@ console.log("Welcome to PowerOS!");
 
 let POS = {
     system: {
-        apps: []
+        apps: [],
+        wallpaper: {
+            internal: [
+                '/src/views/system/img/wallpaper.jpg',
+                '/src/views/system/img/turbodeck-wallpaper.png',
+                '/src/views/system/img/light-sea-dawn-landscape-33545.jpg',
+                '/src/views/system/img/scenic-view-of-mountain-during-evening-2085998.jpg'
+            ],
+            set: url => {
+                $('.all-wrapper').css('background', `url('${url}') no-repeat center`);
+            }
+        }
     }
 };
 

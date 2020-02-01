@@ -7,11 +7,18 @@
     left: 0;
     text-align: left;
     font-size: 20px;
+    transition: 0.2s ease;
 
-    background: url('/src/views/system/img/wallpaper.jpg') no-repeat center;
-    background-size: cover;
+    background: url('/src/views/system/img/turbodeck-wallpaper.png') no-repeat center;
+    background-size: cover !important;
     animation: popIn .5s ease;
 }
+
+
+.backdrop-blur{
+    backdrop-filter: blur(50px);
+}
+
 
 .app-window{
     width: 1000px;
@@ -43,21 +50,23 @@
     width: 22%;
     height: 100%;
     background: rgba(0,0,0,.6);
-    backdrop-filter: blur(25px);
-    border-radius: 0 0 0 5px;
+    border-radius: 17px 0 0 5px;
+    padding-top: 35px;
 }
 .app-window-split.right{
     width: 78%;
-    background: #191919;
+    background: #121315;
     box-sizing: border-box;
+    height: calc(100% + 35px);
     padding: 15px;
+    padding-top: 35px;
 }
 
 .app-window-category{
     width: calc(100% );
     height: 50px;
     line-height: 50px;
-    transition: .2s ease;
+    transition: .1s ease;
 }
 .app-window-category:hover{
     background: rgba(0,0,0,.3);
@@ -90,8 +99,9 @@
     border-radius: 10px;
 }
 .desktop-icon:hover{
-    background: rgba(0,0,0,.2);
+    background: rgba(0,0,0,.5);
     cursor: pointer;
+    box-shadow: 0px 7px 20px rgba(0,0,0,.6);
 }
 .desktop-icon:active{
     background: rgba(0,0,0,.3);

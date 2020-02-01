@@ -1,6 +1,6 @@
 <center><br><br>
     <img src="views/system/img/nitrodex-white.svg" height="25"><br><br>
-    <img src="views/system/img/turbodeck-white.svg" width="400"><br><br><br>
+    <img src="views/system/img/turbodeck-white.svg" class="turbo" width="400"><br><br><br>
     <span class="smaller-text">Head Developer</span><br>
     <span class="bigger-text">RMC Productions</span><br><br>
     
@@ -17,5 +17,19 @@
     .smaller-text{
         font-size: 18px;
         color: #666;
+    }
+    .turbo{
+        animation: glow 5s ease infinite;
+    }
+    @keyframes glow{
+        0%{
+            filter: drop-shadow(0 0 0 transparent);
+        }
+        10%{
+            filter: drop-shadow(0 0 50px white);
+        }
+        20%, 100%{
+            filter: drop-shadow(0 0 0 transparent);
+        }
     }
 </style>

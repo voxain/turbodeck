@@ -42,7 +42,7 @@ function createAppBar(name, info, appWindow){
     let systemIcons = [];
     for (let i = 0; i < 3; i++) {
         systemIcons.push(document.createElement('img'));
-        systemIcons[i].classList = 'appbar-icon-small right';
+        systemIcons[i].classList = 'appbar-icon-small';
     }
 
     systemIcons[0].src = '/src/views/system/icons/UI/close-outline.svg';

@@ -21,11 +21,14 @@ POS.flexplorer = {
         let workDir;
         if(typeof dirShow != 'string') dirShow = dirShow.toString();
         if(dirShow.includes('>')) dirShow = dirShow.split('>');
-        else if(dirShow.length == 1) workDir = POS.fs.sys[dirShow].get().root.get().content;
+        else if(dirShow.length == 1) {
+            dirShow = [dirShow];
+            workDir = POS.fs.sys[dirShow].get().root.get().content;
+        }
 
         workDir.forEach(entry => {
             let FSEntry = new DOMParser().parseFromString(`
-            <div class="desktop-icon">
+            <div onclick="POS.flexplorer.showDir(${dirShow.join('>')}>::NAME::)" class="desktop-icon">
                 <img class="desktop-icon-img" src="/src/views/system/icons/McMojave-circle-black-dark/places/48/custom-folder.svg">
                 <nobr>::NAME::</nobr>
             </div>`
