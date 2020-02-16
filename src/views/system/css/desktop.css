@@ -7,9 +7,9 @@
     left: 0;
     text-align: left;
     font-size: 20px;
-    transition: 0.2s ease;
+    transition: 1s cubic-bezier(0.8 , 0 , 0.2 , 1);
 
-    background: url('/src/views/system/img/turbodeck-wallpaper.png') no-repeat center;
+    background: url('/src/views/system/img/wallpapers/default-1.png') no-repeat center;
     background-size: cover !important;
     animation: popIn .5s ease;
 }
@@ -17,6 +17,7 @@
 
 .backdrop-blur{
     backdrop-filter: blur(50px);
+    background: rgba(0,0,0,.6);
 }
 
 
@@ -26,10 +27,10 @@
     top: 100px;
     left: 300px;
     position: fixed;
-    border-radius: 17px 17px 5px 5px;
+    border-radius: 17px;
     overflow: hidden !important;
     box-shadow: 0px 7px 20px rgba(0,0,0,.6);
-    animation: popIn .3s ease;
+    animation: popIn .3s cubic-bezier(0.8 , 0 , 0.2 , 1);
 }
 .app-window.minimized{
     transform: scale(0.99);
@@ -49,8 +50,7 @@
 .app-window-split.left{
     width: 22%;
     height: 100%;
-    background: rgba(0,0,0,.6);
-    border-radius: 17px 0 0 5px;
+    border-radius: 17px 0 0 17px;
     padding-top: 35px;
 }
 .app-window-split.right{
@@ -92,7 +92,7 @@
     padding: 10px;
     margin: 10px;
     text-align: center;
-    transition: .1s ease;
+    transition: .1s cubic-bezier(0.8 , 0 , 0.2 , 1);
     overflow: hidden;
     display: inline-block;
     font-size: 16px;
@@ -104,7 +104,9 @@
     box-shadow: 0px 7px 20px rgba(0,0,0,.6);
 }
 .desktop-icon:active{
-    background: rgba(0,0,0,.3);
+    background: rgba(0,0,0,.6);
+    box-shadow: 0px 4px 9px rgba(0,0,0,.7);
+    transform: scale(.9);
 }
 
 .desktop-icon-img{

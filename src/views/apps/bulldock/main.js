@@ -9,7 +9,7 @@ request.onload = () => {
     $('.bulldock-icon').on('mouseenter', e => {
         let tooltip = document.createElement('div');
         tooltip.innerHTML = e.target.name;
-        tooltip.classList = 'tooltip';
+        tooltip.classList = 'tooltip backdrop-blur';
         $(tooltip).css('left', e.clientX - 10 - 70);
         $(tooltip).css('bottom', 80);
         $(bulldock).append(tooltip);
