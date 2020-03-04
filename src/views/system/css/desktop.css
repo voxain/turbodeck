@@ -30,7 +30,7 @@
     border-radius: 17px;
     overflow: hidden !important;
     box-shadow: 0px 7px 20px rgba(0,0,0,.6);
-    animation: popIn .3s cubic-bezier(0.8 , 0 , 0.2 , 1);
+    animation: popIn .3s cubic-bezier(.17,.67,0,.83);
 }
 .app-window.minimized{
     transform: scale(0.99);
@@ -60,6 +60,19 @@
     height: calc(100% + 35px);
     padding: 15px;
     padding-top: 35px;
+}
+.app-window-statusbar{
+    color: rgba(255,255,255,.2);
+    position: absolute;
+    width: 100%;
+    padding-left: 7px;
+    box-sizing: border-box;
+    height: 30px;
+    bottom: 0;
+    right: 0;
+}
+.app-window-statusbar.right{
+    width: 78%;
 }
 
 .app-window-category{
@@ -92,7 +105,7 @@
     padding: 10px;
     margin: 10px;
     text-align: center;
-    transition: .1s cubic-bezier(0.8 , 0 , 0.2 , 1);
+    transition: .2s cubic-bezier(.17,.67,0,.83);
     overflow: hidden;
     display: inline-block;
     font-size: 16px;
