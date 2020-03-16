@@ -25,7 +25,7 @@ POS.openAppWindow = appID => {
 
         $(appWindow).draggable({
             handle: 'div.appbar',
-            stack: "#all-wrapper div"
+            stack: "#all-wrapper .app-window",
         });
     }
 };

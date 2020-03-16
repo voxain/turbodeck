@@ -6,8 +6,8 @@
     height: 60px;
     left: 5%;
     bottom: 0;
-    text-align: center;
     animation: slideIn .3s ease;
+    z-index: 500;
 }
 
 .bulldock-background{
@@ -18,7 +18,8 @@
     backdrop-filter: blur(25px);
     box-shadow: 0px 7px 20px rgba(0,0,0,.6);
     border-radius: 12px;
-    transform: translateY(40px);
+    box-sizing: border-box;
+    padding: 10px;
 }
 
 .bulldock-icon{
@@ -38,8 +39,8 @@
     transform: scale(1);
 }
 @keyframes slideIn{
-    0%{bottom: -70px; opacity: 0;}
-    100%{bottom: 0; opacity: 1;}
+    0%{transform: translateY(20px); opacity: 0;}
+    100%{transform: translateY(0); opacity: 1;}
 }
 
 .tooltip{
@@ -50,5 +51,6 @@
     border-radius: 100px;
     overflow: hidden;
     box-shadow: 0px 7px 20px rgba(0,0,0,.6);
-    animation: fadeIn .2s ease;
+    animation: slideIn .2s ease;
+    text-align: center;
 }
