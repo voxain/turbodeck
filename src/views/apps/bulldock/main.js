@@ -10,11 +10,11 @@ request.onload = () => {
         let tooltip = document.createElement('div');
         tooltip.innerHTML = e.target.name;
         tooltip.classList = 'tooltip backdrop-blur';
-        $(tooltip).css('left', e.clientX - 10 - 70);
-        $(tooltip).css('bottom', 80);
+        $(tooltip).css('left', e.clientX - 80 > 20 ? e.clientX - 10 - 70 : 20);
+        $(tooltip).css('bottom', 95);
         $(bulldock).append(tooltip);
         $(e.target).on('mousemove', c => {
-            $(tooltip).css('left', c.clientX - 10 - 70);
+            $(tooltip).css('left', c.clientX - 80 > 20 ? c.clientX - 10 - 70 : 20);
         });
         $(e.target).on('mouseleave', t => {
             $(tooltip).remove();
@@ -35,6 +35,11 @@ $( bulldock ).disableSelection();
 $( bulldock ).sortable({
     items: "img:not(.ui-state-disabled)"
 });
+
+setInterval(() => {
+    let time = new Date();
+    $('#dockclock').html(time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds() + '<br>' + time.toLocaleDateString());
+}, 500);
 
 parseStyles(["/src/views/apps/bulldock/css/bulldock.css"]);
 $('#all-wrapper').append(bulldock);

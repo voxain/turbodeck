@@ -6,7 +6,7 @@ request.onload = () => {
     parseStyles(["/src/views/system/css/main.css", "/src/views/system/css/loadingScreen.css"]);
     setTimeout(() => {
         parseScripts(["js/init/desktop.js"]);
-    }, /*9000*/ 2000);
+    }, /*9000*/ 500);
 };
 request.onerror = err => {
     console.log(err);

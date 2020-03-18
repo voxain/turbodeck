@@ -26,6 +26,10 @@ POS.flexplorer = {
             workDir = POS.fs.sys[dirShow].get().root.get().content;
         }
 
+        console.log(dirShow)
+
+        $('#flexplorer-statusbar').text(workDir.length + ' Elements');
+
         workDir.forEach(entry => {
             let FSEntry = new DOMParser().parseFromString(`
             <div onclick="POS.flexplorer.showDir(${dirShow.join('>')}>::NAME::)" class="desktop-icon">

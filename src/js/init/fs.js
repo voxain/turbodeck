@@ -92,7 +92,7 @@ class Filesystem extends FsConstruct {
         this.#size = size;
 
         if(system) this.#root = new SystemPartition('root');
-        else this.#root = new Directory('Put your data here.txt');
+        else this.#root = new Directory('root');
     }
 
     get() {

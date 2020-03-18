@@ -1,5 +1,8 @@
 <h2>Wallpapers</h2>
-<section id="settings-wallpapers"></section>
+<section id="settings-wallpapers"></section><br>
+
+<h2>Graphical Effects</h2>
+<button onclick="POS.system.toggleBlur()">Toggle Background blur</button>
 
 <style>
     .wallpaper-preview{
@@ -12,7 +15,7 @@
         margin-right: 15px;
         margin-bottom: 15px;
         cursor: pointer;
-        transition: .2s ease;
+        transition: .2s cubic-bezier(.17,.67,0,.83);
     }
     .wallpaper-preview:hover{
         transform: scale(1.1);

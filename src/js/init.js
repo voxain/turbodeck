@@ -15,6 +15,9 @@ let POS = {
             set: url => {
                 $('.all-wrapper').css('background', `url('${url}') no-repeat center`);
             }
+        },
+        toggleBlur: () => {
+            $('#all-wrapper').append($('<style>').html('.backdrop-blur{backdrop-filter: none !important; background: #0c0c0c !important}'));
         }
     }
 };

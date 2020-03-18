@@ -27,6 +27,10 @@ POS.openAppWindow = appID => {
             handle: 'div.appbar',
             stack: "#all-wrapper .app-window",
         });
+
+        $(appWindow).resizable({
+            ghost: true
+        });
     }
 };
 
