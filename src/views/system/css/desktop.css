@@ -14,12 +14,27 @@
     animation: popIn .5s ease;
 }
 
+.background-video{
+    min-height: 100%;
+    min-width: 100%;
+}
+
 
 .backdrop-blur{
     backdrop-filter: blur(50px);
     background: rgba(0,0,0,.6);
 }
 
+
+button.hover-ripple{
+    transition: .2s ease;
+}
+button.hover-ripple:hover{
+    box-shadow: 0px 3px 13px rgba(0,0,0,.6);
+}
+button.hover-ripple:active{
+    box-shadow: 0px 2px 3px 1px rgba(0,0,0,.85);
+}
 
 .app-window{
     width: 1000px;
@@ -55,7 +70,7 @@
 }
 .app-window-split.right{
     width: 78%;
-    background: #121315;
+    background: #111;
     box-sizing: border-box;
     height: calc(100% + 35px);
     padding: 15px;
@@ -91,6 +106,7 @@
     font-size: 24px;
     float: left;
 }
+
 
 .icon{
     width: 22px;

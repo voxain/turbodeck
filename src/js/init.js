@@ -17,10 +17,11 @@ let POS = {
             }
         },
         toggleBlur: () => {
-            $('#all-wrapper').append($('<style>').html('.backdrop-blur{backdrop-filter: none !important; background: #0c0c0c !important}'));
+            $('#all-wrapper').append($('<style>').html('.backdrop-blur{backdrop-filter: none !important; background: #151515 !important}'));
         }
     }
 };
+
 
 let parseScripts = scripts => {
     scripts.forEach(e => {
