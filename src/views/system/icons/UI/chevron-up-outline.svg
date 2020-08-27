@@ -11,7 +11,7 @@
    version="1.1"
    id="svg847"
    sodipodi:docname="chevron-up-outline.svg"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <metadata
      id="metadata853">
     <rdf:RDF>
@@ -34,36 +34,36 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="640"
-     inkscape:window-height="480"
+     inkscape:window-width="1920"
+     inkscape:window-height="1137"
      id="namedview849"
      showgrid="false"
      inkscape:zoom="9.8333333"
      inkscape:cx="12"
      inkscape:cy="12"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
+     inkscape:window-x="1672"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
      inkscape:current-layer="svg847" />
   <g
      data-name="Layer 2"
      id="g845"
-     style="fill:#ffffff">
+     style="fill:#111111;fill-opacity:1">
     <g
        data-name="chevron-up"
        id="g843"
-       style="fill:#ffffff">
+       style="fill:#111111;fill-opacity:1">
       <rect
          width="24"
          height="24"
          transform="rotate(180 12 12)"
          opacity="0"
          id="rect839"
-         style="fill:#ffffff" />
+         style="fill:#111111;fill-opacity:1" />
       <path
          d="M16 14.5a1 1 0 0 1-.71-.29L12 10.9l-3.3 3.18a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.42l4-3.86a1 1 0 0 1 1.4 0l4 4a1 1 0 0 1 0 1.42 1 1 0 0 1-.69.28z"
          id="path841"
-         style="fill:#ffffff" />
+         style="fill:#111111;fill-opacity:1" />
     </g>
   </g>
 </svg>

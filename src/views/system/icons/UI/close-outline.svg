@@ -11,7 +11,7 @@
    version="1.1"
    id="svg10"
    sodipodi:docname="close-outline.svg"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <metadata
      id="metadata16">
     <rdf:RDF>
@@ -34,7 +34,7 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="640"
+     inkscape:window-width="786"
      inkscape:window-height="480"
      id="namedview12"
      showgrid="false"
@@ -42,28 +42,28 @@
      inkscape:cx="12"
      inkscape:cy="12"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="154"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg10" />
   <g
      data-name="Layer 2"
      id="g8"
-     style="fill:#ffffff">
+     style="fill:#111111;opacity:0.99999999;fill-opacity:1">
     <g
        data-name="close"
        id="g6"
-       style="fill:#ffffff">
+       style="fill:#111111;fill-opacity:1">
       <rect
          width="24"
          height="24"
          transform="rotate(180 12 12)"
          opacity="0"
          id="rect2"
-         style="fill:#ffffff" />
+         style="fill:#111111;fill-opacity:1" />
       <path
          d="M13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"
          id="path4"
-         style="fill:#ffffff" />
+         style="fill:#111111;fill-opacity:1" />
     </g>
   </g>
 </svg>

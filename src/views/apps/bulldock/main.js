@@ -8,13 +8,14 @@ request.onload = () => {
     bulldock.innerHTML = request.response;
     $('.bulldock-icon').on('mouseenter', e => {
         let tooltip = document.createElement('div');
-        tooltip.innerHTML = e.target.name;
-        tooltip.classList = 'tooltip backdrop-blur';
+        console.dir(e.originalEvent.srcElement)
+        tooltip.innerHTML = e.originalEvent.srcElement.dataset['name'];
+        tooltip.classList = 'tooltip';
         $(tooltip).css('left', e.clientX - 80 > 20 ? e.clientX - 10 - 70 : 20);
-        $(tooltip).css('bottom', 95);
+        $(tooltip).css('bottom', 100);
         $(bulldock).append(tooltip);
         $(e.target).on('mousemove', c => {
-            $(tooltip).css('left', c.clientX - 80 > 20 ? c.clientX - 10 - 70 : 20);
+            $(tooltip).css('left', c.clientX - 10 - 70);
         });
         $(e.target).on('mouseleave', t => {
             $(tooltip).remove();

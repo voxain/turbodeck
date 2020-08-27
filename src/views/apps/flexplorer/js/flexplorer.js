@@ -1,3 +1,5 @@
+let lastDir = '';
+
 POS.flexplorer = {
 
     refreshFS() {
@@ -6,7 +8,7 @@ POS.flexplorer = {
         POS.fs.sys.forEach((fs, i) => {
             let FSEntry = new DOMParser().parseFromString(`
             <div onclick="POS.flexplorer.showDir(${i})" class="app-window-category">
-                <img class="icon" src="/src/views/system/icons/UI/hard-drive-outline.svg"> ::NAME::
+                <span class="iconify icon" data-icon="uil:hdd" data-inline="false"></span> ::NAME::
             </div>`
             .replace(/::NAME::/g, fs.getInfo().name), 
             'text/html');
@@ -17,6 +19,7 @@ POS.flexplorer = {
 
     showDir(dirShow) {
         $('#flexplorer-view').text('');
+        lastDir = dirShow;
 
         let workDir;
         if(typeof dirShow != 'string') dirShow = dirShow.toString();
@@ -26,13 +29,11 @@ POS.flexplorer = {
             workDir = POS.fs.sys[dirShow].get().root.get().content;
         }
 
-        console.log(dirShow)
-
         $('#flexplorer-statusbar').text(workDir.length + ' Elements');
 
         workDir.forEach(entry => {
             let FSEntry = new DOMParser().parseFromString(`
-            <div onclick="POS.flexplorer.showDir(${dirShow.join('>')}>::NAME::)" class="desktop-icon">
+            <div onclick="POS.flexplorer.showDir('${dirShow.join('>')}>::NAME::')" class="desktop-icon">
                 <img class="desktop-icon-img" src="/src/views/system/icons/McMojave-circle-black-dark/places/48/custom-folder.svg">
                 <nobr>::NAME::</nobr>
             </div>`

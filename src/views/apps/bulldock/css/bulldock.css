@@ -1,33 +1,48 @@
 .bulldock{
     position: fixed;
-    width: calc(98% - 7px);
-    padding: 5px;
-    padding-left: 7px;
-    height: 70px;
-    left: calc(1% - 7px);
-    bottom: 20px;
+    width: calc(100% - 40px);
+    align-items: center;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    left: 20px;
+    bottom: -95px;
     animation: slideIn .3s ease;
     z-index: 500;
+    transition: .3s cubic-bezier(.17,.67,0,.83);
+    border-bottom: 20px solid transparent;
+}
+.bulldock:hover{
+    bottom: 0px;
 }
 
 .bulldock-background{
-    position: absolute;
-    width: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    justify-content: center;
     height: 100%;
-    box-shadow: 0px 7px 20px rgba(0,0,0,.6);
+    box-shadow: 0px 7px 20px rgba(0,0,0,.4);
     border-radius: 17px;
     box-sizing: border-box;
-    padding: 10px;
     z-index:120;
+    margin-right: 20px;
+    min-width: 80px;
+    color: #ffe;
 }
 
 .bulldock-icon{
     width: 60px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    justify-content: center;
     height: 60px;
     transition: .2s cubic-bezier(.17,.67,0,.83);
-    margin-right: 7px;
+    margin: 10px;
     transform-origin: 30px 60px;
-    filter: brightness(1) drop-shadow(0px 3px 6px rgba(0,0,0,.5));
+    filter: brightness(1) /*drop-shadow(0px 3px 6px rgba(0,0,0,.5))*/;
 }
 .bulldock-icon:hover{
     transform: scale(1.1);
@@ -46,9 +61,13 @@
     height: 100%;
     width: 100px;
     float: right;
-    text-align: right;
-    padding-right: 10px;
+    text-align: center;
+    padding: 20px;
     line-height: 28px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .tooltip{
@@ -57,8 +76,9 @@
     height: 35px;
     border-radius: 12px 12px 0 0;
     overflow: hidden;
-    box-shadow: 0px 7px 20px rgba(0,0,0,.6);
     animation: slideIn .2s ease;
     text-align: center;
     z-index:100;
+    color: #eee;
+    text-shadow: 0px 0px 5px rgba(0,0,0,.6);
 }

@@ -1,3 +1,20 @@
-<br><br><br><br><center><img src="/src/views/system/icons/UI/monitor-outline.svg" style="opacity: .1" width=170><br>
-<h1 style="opacity: .1">Oops... Nothing to see here.</h1>
-</center>
+<h2>Primary Display</h2>
+<div class="display-preview">1</div><br>
+Resolution: <span id="primary-resolution">???</span>
+
+<style>
+    .display-preview{
+        width: 192px;
+        height: 108px;
+        background: rgba(0,0,0,.2);
+        color: white;
+        font-size: 39px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 7px;
+    }
+</style>
+<script>
+    $('#primary-resolution').html(window.outerWidth + 'x' + window.outerHeight);
+</script>

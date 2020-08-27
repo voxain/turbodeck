@@ -10,7 +10,7 @@ POS.openAppWindow = appID => {
         let appWindow = document.createElement('div');
         appWindow.name = appID
         appWindow.state = 'active'
-        appWindow.classList = 'app-window';
+        appWindow.classList = 'app-window backdrop-blur';
         appWindow.append(createAppBar(appID, appInformation, appWindow));
 
         let appView = document.createElement('div');

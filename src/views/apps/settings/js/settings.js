@@ -12,7 +12,7 @@ POS.settings = {
                 var parentOffset = $('.hover-ripple').offset(); 
                 var relX = e.pageX - parentOffset.left;
                 var relY = e.pageY - parentOffset.top;
-                $('.hover-ripple').css('background', `radial-gradient(circle at ${relX}px ${relY}px, rgba(45,45,45,1) 0px, transparent ${POS.system.indicators.mouse.button1 ? '30px' : '60px'}`)
+                $('.hover-ripple').css('background', `radial-gradient(circle at ${relX}px ${relY}px, rgba(230,230,230,1) 0px, transparent ${POS.system.indicators.mouse.button1 ? '30px' : '60px'}`)
             });
             $('button').on('mouseout', e => {
                 $(e.originalEvent.target).css('background', `transparent`)

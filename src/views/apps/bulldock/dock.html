@@ -1,9 +1,44 @@
 <div class="bulldock-background ui-state-disabled backdrop-blur">
-<img name="Deck" src="/src/views/system/img/deck.svg" onclick="POS.openAppWindow('deck')" class="bulldock-icon">
-<img name="Flexplorer" src="/src/views/system/icons/McMojave-circle-black-dark/places/48/custom-folder.svg" onclick="POS.openAppWindow('flexplorer')" class="bulldock-icon">
-<img name="TurboNet" src="/src/views/system/icons/McMojave-circle-black-dark/categories/32/applications-internet.svg"  class="bulldock-icon">
-<img name="TitanMusix" src="/src/views/system/icons/McMojave-circle-black-dark/apps/rhythmbox.svg" class="bulldock-icon">
-<img name="System Settings" src="/src/views/apps/settings/icon.svg" onclick="POS.openAppWindow('settings')" class="bulldock-icon">
-<img name="Terminal" src="/src/views/system/icons/McMojave-circle-black-dark/apps/terminal.svg" onclick="POS.openAppWindow('terminal')" class="bulldock-icon">
-<div class="dockclock" id="dockclock">00:00</div>
+    <div data-name="Deck" class="bulldock-icon" onclick="POS.openAppWindow('deck')">
+        <span class="iconify" data-icon="uil:rocket" data-inline="false"></span>
+    </div>
 </div>
+<div class="bulldock-background ui-state-disabled backdrop-blur">
+    <div data-name="Flexplorer" class="bulldock-icon" onclick="POS.openAppWindow('flexplorer')">
+        <span class="iconify" data-icon="uil:folder" data-inline="false"></span>
+    </div>
+    <div data-name="TurboNet" class="bulldock-icon" onclick="POS.openAppWindow('turbonet')">
+        <span class="iconify" data-icon="uil:globe" data-inline="false"></span>
+    </div>
+    <div data-name="TitanMusix" class="bulldock-icon" onclick="POS.openAppWindow('titanmusix')">
+        <span class="iconify" data-icon="uil:music" data-inline="false"></span>
+    </div>
+    <div data-name="System Settings" class="bulldock-icon" onclick="POS.openAppWindow('settings')">
+        <span class="iconify" data-icon="uil:cog" data-inline="false"></span>
+    </div>
+    <div data-name="Terminal" class="bulldock-icon" onclick="POS.openAppWindow('terminal')">
+        <span class="iconify" data-icon="uil:arrow" data-inline="false"></span>
+    </div>
+</div>
+
+<div class="bulldock-background ui-state-disabled backdrop-blur">
+   <div class="dockclock" id="dockclock">00:00</div>
+</div>
+
+
+<section style="margin-left: auto;display: flex">
+    <div class="bulldock-background ui-state-disabled backdrop-blur">
+        <div data-name="Battery: 100%" class="bulldock-icon">
+            <span class="iconify" data-icon="uil:battery-empty" data-inline="false"></span>
+        </div>
+        <div data-name="Volume" class="bulldock-icon">
+            <span class="iconify" data-icon="uil:volume-down" data-inline="false"></span>
+        </div>
+    </div>
+
+    <div class="bulldock-background ui-state-disabled backdrop-blur" style="margin: 0">
+        <div data-name="Control Center" class="bulldock-icon">
+            <span class="iconify" data-icon="uil:sliders-v-alt" data-inline="false"></span>
+        </div>
+    </div>
+</section>
