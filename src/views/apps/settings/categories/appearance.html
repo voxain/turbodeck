@@ -1,15 +1,31 @@
-<h2>Wallpapers</h2>
-<section style="perspective: 500px;" id="settings-wallpapers"></section><br>
+<div class="settings-section">
+    <h2 class="settings-headline">Wallpapers</h2>
+    <section style="perspective: 500px; width: 100%; height: auto" id="settings-wallpapers"></section><br>
+</div>
 
-<h2>Graphical Effects</h2>
-<button class="hover-ripple" onclick="POS.system.toggleBlur()">Toggle Background blur</button>
+<div>
+    <h2 class="settings-headline">Graphical Effects</h2>
+    <label class="toggle">
+        <input class="toggle-checkbox" type="checkbox" checked onchange="POS.system.toggleBlur()">
+        <div class="toggle-switch"></div>
+        <span class="toggle-label">Background blur</span>
+    </label><br><br>
+    
+    <label class="toggle">
+        <input class="toggle-checkbox" type="checkbox" disabled>
+        <div class="toggle-switch"></div>
+        <span class="toggle-label">Dark mode (coming soon!)</span>
+    </label><br><br>
+
+    <button onclick="POS.system.notification.send({title: 'TEST', text: 'TESTNOTIFY'})" class="hover-ripple">Show test notification</button><br><br>
+</div>
 
 <style>
     .wallpaper-preview{
         width: calc(33% - 15px);
         height: 130px;
         background-size: cover !important;
-        float: left;
+        display: inline-block;
         box-shadow: 0px 7px 20px rgba(0,0,0,.3);
         border-radius: 12px;
         margin-right: 15px;

@@ -10,13 +10,41 @@ let POS = {
                     settings{
                         title,
                         text,
+                        text2,
                         image,
                         persistent,
                         duration,
                         priority,
-                        sound
+                        sound,
+                        actions [function/array of functions]
                     }
                 */
+               let parser = new DOMParser();
+               let id = 'notification-' + Math.round(Math.random() * 0x1000);
+               let notifyTemplate = `
+                <div class="notification backdrop-blur" id="${id}">
+                    <div class="notification-image">
+                        <span class="iconify" data-icon="uil:shield-exclamation" data-inline="false"></span>
+                    </div>
+                    <div class="notification-content">
+                        <span class="notification-title">::TITLE::</span><br>
+                        <span class="notification-text">::TEXT::</span><br>
+                        <span class="notification-text">::TEXT2::</span>
+                    </div>
+                </div>
+                `.replace(/::TITLE::/gi, settings.title || 'NOTIFICATION TITLE MISSING')
+                .replace(/::TEXT::/gi, settings.text || 'NOTIFICATION TEXT MISSING')
+                .replace(/::TEXT2::/gi, settings.text2 || '');
+
+                let HTMLnot = parser.parseFromString(notifyTemplate, 'text/html');
+
+                $('#notifications').append(HTMLnot.body.childNodes);
+                setTimeout(() => {
+                    $('#' + id).css('animation', 'notificationOut 0.4s cubic-bezier(0.8 , 0 , 0.2 , 1)')
+                }, 4000);
+                setTimeout(() => {
+                    $('#' + id).remove()
+                }, 4380);
             }
         },
         wallpaper: {
@@ -31,6 +59,10 @@ let POS = {
             ],
             set: url => {
                 $('.all-wrapper').css('background', `url('${url}') no-repeat center`);
+                POS.system.notification.send({
+                    title: 'Wallpaper changed',
+                    text: 'Wallpaper successfully changed.'
+                })
             }
         },
         toggleBlur: () => {

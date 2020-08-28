@@ -28,6 +28,15 @@
     background: rgba(255,255,255,.3);
 }
 
+.notification-wrapper{
+    position: fixed;
+    top:0;
+    right: 0;
+    width: auto;
+    height: auto;
+    padding: 20px;
+}
+
 
 button.hover-ripple{
     transition: .2s ease;
@@ -82,6 +91,7 @@ button.hover-ripple:active{
     padding-top: 35px;
     padding-left: 35px;
     z-index: 4;
+    overflow: auto;
 }
 .app-window-statusbar{
     color: rgba(255,255,255,.2);
@@ -161,9 +171,6 @@ button.hover-ripple:active{
 
 
 .notification{
-    position: fixed;
-    top: 20px;
-    right: 20px;
     height: 120px;
     width: 400px;
     box-shadow: 0px 7px 20px rgba(0,0,0,.2);
@@ -171,20 +178,145 @@ button.hover-ripple:active{
     z-index:150;
     display: flex;
     border-radius: 17px;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 10px;
+    margin-bottom: 20px;
+    animation: notification 0.4s cubic-bezier(0.8 , 0 , 0.2 , 1);
+}
+
+@keyframes notification{
+    0%{
+        transform: scale(.7) translate(500px, -30px);
+    }
+}
+@keyframes notificationOut{
+    100%{
+        margin-top: -140px;
+        opacity: 0;
+    }
 }
 
 .notification-image{
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
     font-size: 48px;
     align-items: center;
     justify-content: center;
     display: flex;
+    margin-right: 15px;
     color: #222;
 }
 
-.notification-text{
+.notification-content{
     text-align: left;
     flex: 1;
-    height: 120px;
+    min-width: 400px;
+    white-space: nowrap;
+    line-height: 22px;
+    padding-top: 13px;
+    background: linear-gradient(to right, #222f 0%, #222f 55%, #2220 65%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+}
+
+.notification-title{
+    font-size: 26px;
+    font-weight: 500;
+    font-family: "Rubik";
+}
+.notification-text{
+    font-size: 18px;
+}
+
+.settings-section{
+    width: 100%;
+    height: auto;
+}
+.app-window-split.right h2{
+    position: sticky; 
+    top: 0; 
+    z-index: 20; 
+    background: white;
+    border-left: 35px solid white;
+    margin-left: -35px;
+    border-top: 35px solid white;
+    padding-bottom: 8px;
+}
+
+::-webkit-scrollbar{
+    width: 20px;
+    position: fixed;
+}
+::-webkit-scrollbar-track{
+    border: solid 7px transparent;
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    box-shadow: inset 0 0 10px 10px rgba(0,0,0,.1);
+    border: solid 7px transparent;
+    border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover{
+    box-shadow: inset 0 0 10px 10px rgba(0,0,0,.2);
+}
+::-webkit-scrollbar-thumb:active{
+    box-shadow: inset 0 0 10px 10px rgba(0,0,0,.4);
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.toggle-switch {
+  display: inline-block;
+  background: #ccc;
+  border-radius: 16px;
+  width: 48px;
+  height: 24px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+}
+.toggle-switch:before, .toggle-switch:after {
+  content: "";
+}
+.toggle-switch:before {
+  display: block;
+  background: #fff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: ease 0.25s;
+}
+.toggle:hover .toggle-switch:before {
+  background: #fff;
+}
+.toggle-checkbox:checked + .toggle-switch {
+  background: #111;
+}
+.toggle-checkbox:checked + .toggle-switch:before {
+  left: 28px;
+}
+
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.toggle-label {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
 }

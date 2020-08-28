@@ -31,11 +31,11 @@ request.send();
 
 bulldock.classList = 'bulldock';
 
-$( bulldock ).sortable();
-$( bulldock ).disableSelection();
-$( bulldock ).sortable({
-    items: "img:not(.ui-state-disabled)"
-});
+$( '.bulldock' ).sortable();
+$( '.bulldock-background' ).disableSelection();
+/*$( '.bulldock-background' ).sortable({
+    items: "div:not(.ui-state-disabled)"
+});*/
 
 setInterval(() => {
     let time = new Date();
